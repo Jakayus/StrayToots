@@ -16,6 +16,12 @@
 		DC7D829A29EB448800F11252 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7D829929EB448800F11252 /* ContentView.swift */; };
 		DC7D829C29EB448900F11252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7D829B29EB448900F11252 /* Assets.xcassets */; };
 		DC7D829F29EB448900F11252 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7D829E29EB448900F11252 /* Preview Assets.xcassets */; };
+		DC7D82B029EB518600F11252 /* Tokens.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7D82AF29EB518600F11252 /* Tokens.plist */; };
+		DC7D82B129EB518600F11252 /* Tokens.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7D82AF29EB518600F11252 /* Tokens.plist */; };
+		DC7D82B329EB51A600F11252 /* TokensExample.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7D82B229EB51A600F11252 /* TokensExample.plist */; };
+		DC7D82B429EB51A600F11252 /* TokensExample.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC7D82B229EB51A600F11252 /* TokensExample.plist */; };
+		DC7D82B629EB52AF00F11252 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7D82B529EB52AF00F11252 /* Config.swift */; };
+		DC7D82B729EB52AF00F11252 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7D82B529EB52AF00F11252 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,9 @@
 		DC7D829929EB448800F11252 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC7D829B29EB448900F11252 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC7D829E29EB448900F11252 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DC7D82AF29EB518600F11252 /* Tokens.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Tokens.plist; sourceTree = "<group>"; };
+		DC7D82B229EB51A600F11252 /* TokensExample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TokensExample.plist; sourceTree = "<group>"; };
+		DC7D82B529EB52AF00F11252 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,9 @@
 		DC7D827929EB448500F11252 = {
 			isa = PBXGroup;
 			children = (
+				DC7D82B529EB52AF00F11252 /* Config.swift */,
+				DC7D82AF29EB518600F11252 /* Tokens.plist */,
+				DC7D82B229EB51A600F11252 /* TokensExample.plist */,
 				DC7D828429EB448600F11252 /* StrayToots */,
 				DC7D829629EB448800F11252 /* StrayToots Watch App */,
 				DC7D828329EB448600F11252 /* Products */,
@@ -211,6 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7D828D29EB448800F11252 /* Preview Assets.xcassets in Resources */,
+				DC7D82B329EB51A600F11252 /* TokensExample.plist in Resources */,
+				DC7D82B029EB518600F11252 /* Tokens.plist in Resources */,
 				DC7D828A29EB448800F11252 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7D829F29EB448900F11252 /* Preview Assets.xcassets in Resources */,
+				DC7D82B429EB51A600F11252 /* TokensExample.plist in Resources */,
+				DC7D82B129EB518600F11252 /* Tokens.plist in Resources */,
 				DC7D829C29EB448900F11252 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +249,7 @@
 			files = (
 				DC7D828829EB448600F11252 /* ContentView.swift in Sources */,
 				DC7D828629EB448600F11252 /* StrayTootsApp.swift in Sources */,
+				DC7D82B629EB52AF00F11252 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +259,7 @@
 			files = (
 				DC7D829A29EB448800F11252 /* ContentView.swift in Sources */,
 				DC7D829829EB448800F11252 /* StrayTootsApp.swift in Sources */,
+				DC7D82B729EB52AF00F11252 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
