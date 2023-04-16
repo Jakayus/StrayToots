@@ -26,10 +26,14 @@ class MastadonNetworking: ObservableObject {
     
     @Published var toots = [Toot]() // toots will be held here
     
+    init() {
+        print("init")
+    }
+    
     func fetchTimelineData() {
         
         let access_token = getAccessToken()
-        
+        print("access token: \(access_token)")
         
         // create a URL
         guard let url = URL(string: "https://iosdev.space/api/v1/timelines/home?limit=10") else { return } // exit function if not working
@@ -46,6 +50,8 @@ class MastadonNetworking: ObservableObject {
                let toots = try? JSONDecoder().decode([Toot].self, from: data) {   // attempt to decode from [Toot]
                 self.toots = toots
                 print("success!")
+            } else {
+                print("errored out")
             }
         }
         

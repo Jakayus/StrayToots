@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var MastadonAPI = MastadonNetworking()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,12 +19,15 @@ struct ContentView: View {
             Text("Hello, world!")
             Text("token: \(getAccessToken())")
         }
+        .onAppear{
+            MastadonAPI.fetchTimelineData()
+        }
         .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(MastadonAPI: MastadonNetworking())
     }
 }
