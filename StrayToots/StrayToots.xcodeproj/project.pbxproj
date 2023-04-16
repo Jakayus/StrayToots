@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC20EE7D29EBAADF0063D832 /* MastadonNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC20EE7C29EBAADF0063D832 /* MastadonNetworking.swift */; };
+		DC20EE7E29EBAADF0063D832 /* MastadonNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC20EE7C29EBAADF0063D832 /* MastadonNetworking.swift */; };
 		DC7D828629EB448600F11252 /* StrayTootsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7D828529EB448600F11252 /* StrayTootsApp.swift */; };
 		DC7D828829EB448600F11252 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7D828729EB448600F11252 /* ContentView.swift */; };
 		DC7D828A29EB448800F11252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7D828929EB448800F11252 /* Assets.xcassets */; };
@@ -49,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DC20EE7C29EBAADF0063D832 /* MastadonNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MastadonNetworking.swift; sourceTree = "<group>"; };
 		DC7D828229EB448600F11252 /* StrayToots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrayToots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7D828529EB448600F11252 /* StrayTootsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrayTootsApp.swift; sourceTree = "<group>"; };
 		DC7D828729EB448600F11252 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		DC7D827929EB448500F11252 = {
 			isa = PBXGroup;
 			children = (
+				DC20EE7C29EBAADF0063D832 /* MastadonNetworking.swift */,
 				DC7D82B529EB52AF00F11252 /* Config.swift */,
 				DC7D82AF29EB518600F11252 /* Tokens.plist */,
 				DC7D82B229EB51A600F11252 /* TokensExample.plist */,
@@ -249,6 +253,7 @@
 			files = (
 				DC7D828829EB448600F11252 /* ContentView.swift in Sources */,
 				DC7D828629EB448600F11252 /* StrayTootsApp.swift in Sources */,
+				DC20EE7D29EBAADF0063D832 /* MastadonNetworking.swift in Sources */,
 				DC7D82B629EB52AF00F11252 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +264,7 @@
 			files = (
 				DC7D829A29EB448800F11252 /* ContentView.swift in Sources */,
 				DC7D829829EB448800F11252 /* StrayTootsApp.swift in Sources */,
+				DC20EE7E29EBAADF0063D832 /* MastadonNetworking.swift in Sources */,
 				DC7D82B729EB52AF00F11252 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
