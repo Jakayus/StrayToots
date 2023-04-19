@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 /// Toot Definitions
@@ -13,54 +14,56 @@ import Foundation
 
 struct Toot: Identifiable, Codable {
     let id: String
-    let content: String
-    let Account: Account
-    
+    var content: String
 }
 
-struct Account: Codable {
-    let username: String
-}
-
+/// class to manage Mastadon API
 class MastadonNetworking: ObservableObject {
     
     @Published var toots = [Toot]() // toots will be held here
     
     init() {
-        print("init")
+        print("init") // debug
     }
-    
+
     func fetchTimelineData() {
         
-        let access_token = getAccessToken()
-        print("access token: \(access_token)")
+        // grab token from config file
+        let token = getAccessToken()
         
-        // create a URL
-        guard let url = URL(string: "https://iosdev.space/api/v1/timelines/home?limit=10") else { return } // exit function if not working
+        // verify URL exists, else return
+        guard let url = URL(string: "https://iosdev.space/api/v1/timelines/home?limit=10") else { return }
+        // crete URL request
+        var request = URLRequest(url: url, timeoutInterval: Double.infinity)
         
-        // convert to a URL Request (a URL Request object encapsulates policies as well as url)
-        var urlRequest = URLRequest(url: url)
+        // add HTTP Authorization
+        request.addValue("Bearer \(token) ", forHTTPHeaderField: "Authorization")
         
-        // add HTTP header that is required for OAuth for specific user
-        urlRequest.setValue("Bearer \(access_token)", forHTTPHeaderField: "Authorization")
+        // adjust HTTP type to GET
+        request.httpMethod = "GET"
         
-        // start a URL session
-        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in  // data, response, error
-            if let data = data,
-               let toots = try? JSONDecoder().decode([Toot].self, from: data) {   // attempt to decode from [Toot]
-                self.toots = toots
-                print("success!")
+        // create URLSession
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            // verify data itself is good
+            guard let data = data else {
+                print(String(describing: error))
+                return
+            }
+            
+            // attempt to decode the toots from data
+            if let toots = try? JSONDecoder().decode([Toot].self, from: data)
+            {
+                // set toots on main thread
+                DispatchQueue.main.async {
+                    self.toots = toots
+                }
+                print("successful decoding!")
             } else {
-                print("errored out")
+                print("unsuccessful decoding")
             }
         }
-        
         task.resume()
-        
-        
-        
-    } // end fetch
-    
-    
+    }
     
 }
