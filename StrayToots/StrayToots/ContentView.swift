@@ -9,17 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var MastadonAPI = MastadonNetworking()
+    @ObservedObject var MastodonAPI = MastodonNetworking()
     
     var body: some View {
         VStack {
             Text("Go time!")
             Button("Refresh") {
-                MastadonAPI.fetchTimelineData()
-                print("test: \(MastadonAPI.toots.count)")
+                MastodonAPI.fetchTimelineData()
+                print("test: \(MastodonAPI.toots.count)")
             }
             List {
-                ForEach(MastadonAPI.toots) {
+                ForEach(MastodonAPI.toots) {
                     tempView(string1: $0.content, string2: "temp")
                 }
             }
@@ -32,7 +32,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(MastadonAPI: MastadonNetworking())
+        ContentView(MastodonAPI: MastodonNetworking())
     }
 }
 

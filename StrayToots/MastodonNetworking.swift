@@ -18,7 +18,7 @@ struct Toot: Identifiable, Codable {
 }
 
 /// class to manage Mastadon API
-class MastadonNetworking: ObservableObject {
+class MastodonNetworking: ObservableObject {
     
     @Published var toots = [Toot]() // toots will be held here
     
