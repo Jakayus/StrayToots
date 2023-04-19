@@ -1,4 +1,4 @@
-# MastadonWatchApp
+# Stray Toots
 
 This Project creates a Mastadon Client that is used on the Apple Watch system. 
 
