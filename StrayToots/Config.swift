@@ -7,6 +7,50 @@
 
 import Foundation
 
+// STRING MANIPULATION EXTENSIONS
+
+/// Convert HTML to string that can be used in SwiftUI
+// TODO: Update this extension or find another method of string output
+extension String {
+    func htmlToString() -> String {
+        guard let data = self.data(using: .utf8) else {
+            print("Error: Could not convert string to UTF-8 data.")
+            return ""
+        }
+
+        do {
+            let attributedString = try NSAttributedString(
+                data: data,
+                options: [.documentType: NSAttributedString.DocumentType.html],
+                documentAttributes: nil
+            )
+            return attributedString.string
+        } catch {
+            print("Error creating NSAttributedString: \(error)")
+            return ""
+        }
+    }
+}
+
+// TODO: Add Unit Tests to verify if these extensions can be used (Both are Stack Overflow recommendations)
+extension String {
+
+    func stripOutHtml() -> String? {
+        do {
+            guard let data = self.data(using: .unicode) else {
+                return nil
+            }
+            let attributed = try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+            return attributed.string
+        } catch {
+            return nil
+        }
+    }
+}
+
+
+
+// TOKEN ACCESS FUNCTIONS
 // TODO: Make these functions more efficient, perhaps combining some of their aspects
 
 func getAccessToken() -> String {
@@ -50,25 +94,4 @@ func getRedirectURI() -> String {
 }
 
 
-/// Convert HTML to string that can be used in SwiftUI
-// TODO: Update this extension or find another method of string output
-extension String {
-    func htmlToString() -> String {
-        guard let data = self.data(using: .utf8) else {
-            print("Error: Could not convert string to UTF-8 data.")
-            return ""
-        }
 
-        do {
-            let attributedString = try NSAttributedString(
-                data: data,
-                options: [.documentType: NSAttributedString.DocumentType.html],
-                documentAttributes: nil
-            )
-            return attributedString.string
-        } catch {
-            print("Error creating NSAttributedString: \(error)")
-            return ""
-        }
-    }
-}

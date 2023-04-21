@@ -67,7 +67,7 @@ struct TootView: View {
                 Label("Toot Start", systemImage: "person.crop.circle.dashed")
                 Image(systemName: "quote.opening")
             }
-            Text(toot)
+            Text(toot.stripOutHtml() ?? "Error")
             Label("Toot End", systemImage: "quote.closing")
             Divider()
         }
