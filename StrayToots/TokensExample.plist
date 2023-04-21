@@ -9,6 +9,6 @@
 	<key>client_id</key>
 	<string></string>
 	<key>access_token</key>
-	<string></string>
+	<string>access_token_here</string>
 </dict>
 </plist>
