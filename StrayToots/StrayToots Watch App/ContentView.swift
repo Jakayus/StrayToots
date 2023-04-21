@@ -9,24 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var MastodonAPI = MastodonNetworking()
+    @ObservedObject var MastodonAPI:  MastodonNetworking
+    
+    @State var currentTab: Tabs = .tootsTab
+    
+    enum Tabs {
+        case refreshTab, tootsTab
+    }
     
     var body: some View {
-        VStack {
-            Text("Go time!")
-            Button("Refresh") {
-                MastodonAPI.fetchTimelineData()
-                print("test: \(MastodonAPI.toots.count)")
-            }
-            ScrollView {
-                ForEach(MastodonAPI.toots) {
-                    tempView(string1: $0.content, string2: "temp")
-                    //Text("\($0.id)")
-                    //Text("\($0.content)")
-                    
-                }
-            }
-            
+        TabView {
+            RefreshView().tag(Tabs.refreshTab)
+            TootsView().tag(Tabs.tootsTab)
         }
         
         .padding()
@@ -51,3 +45,34 @@ struct tempView: View {
         }
     }
 }
+
+
+// SUPPORTING VIEWS
+// TODO: Create a better file structure for these views
+
+struct RefreshView: View {
+    var body: some View {
+        Text("Refresh View")
+//        Button("Refresh") {
+//            MastodonAPI.fetchTimelineData()
+//            print("test: \(MastodonAPI.toots.count)")
+//        }
+    }
+}
+
+
+struct TootsView: View {
+    var body: some View {
+        
+        Text("Toots View")
+//        ScrollView {
+//            ForEach(MastodonAPI.toots) {
+//                tempView(string1: $0.content, string2: "temp")
+//
+//            }
+//        }
+    }
+}
+ 
+ 
+ 

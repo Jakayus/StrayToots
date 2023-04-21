@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct StrayToots_Watch_AppApp: App {
+    
+    @StateObject var MastodonAPI = MastodonNetworking()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(MastodonAPI: MastodonAPI)
         }
     }
 }
