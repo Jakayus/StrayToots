@@ -61,6 +61,9 @@ struct TootsTimelineView: View {
 
 struct TootView: View {
     var toot = ""
+    
+    var BackgroundColors = [Color.red, Color.blue, Color.yellow, Color.green] // SmashBros 4 player tribute
+    
     var body: some View {
         VStack{
             HStack {
@@ -71,6 +74,7 @@ struct TootView: View {
             Label("Toot End", systemImage: "quote.closing")
             Divider()
         }
+        .background(BackgroundColors.randomElement())
     }
 }
 
