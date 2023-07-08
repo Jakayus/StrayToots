@@ -15,6 +15,11 @@ Watch App:
 - "Boost" a Toot
 - "Bookmark" a Toot
 
+## Screenshots (unfinished and in super early stages, but here's what exists so far)
+![Watch Screenshot 1](refresh_img.png)
+![Watch Screenshot 2](toot_img.png)
+
+
 ## Setup
 
 A Mastodon Access Token is required before running the project. This token is placed into a plist file in order to run.
@@ -23,14 +28,14 @@ A Mastodon Access Token is required before running the project. This token is pl
 
 I personally used [Postman](https://www.postman.com "Postman.com") for getting the tokens, but any API inspector tool will do. Before getting an access token, you must first get a client ID and a client access key from Mastodon. Steps are listed below, with additional notes on doing it through Postman.
 
-Request a [ClientID and ClientSecret](https://docs.joinmastodon.org/client/token/#app)
+**Request a [ClientID and ClientSecret](https://docs.joinmastodon.org/client/token/#app)**
 - Copy and paste the curl command from the above link into your desired API inspection tool (in Postman: After creating a workspace, click "Import" on the top left near the workspace name, and copy/paste the curl command into the text field that comes up. Postman will create a POST command for you.)
 - Replace "mastodon.example" with your desired mastodon instance
 - Send your POST command using the API inspector tool used
 - Save off the contents somewhere for future use. Most important will be the **client_id** and the **client_secret**
 
 
-Use the [Authorization GET Request](https://docs.joinmastodon.org/client/authorized/#login) within a web browser using the Client information provided earlier
+**Use the [Authorization GET Request](https://docs.joinmastodon.org/client/authorized/#login) within a web browser using the Client information provided earlier**
 - Click the link above and copy/paste the https command somewhere you can edit it
 - replace "mastodon.exmaple" with your mastodon instance and "CLIENT_ID" with your client id
 - remove the line endings so that the command is one long string
@@ -39,7 +44,7 @@ Use the [Authorization GET Request](https://docs.joinmastodon.org/client/authori
 - will ask you to grant access based upon the request made
 - copy the **authorization code** and store it somewhere safe
 
-Use the Authorization Code to get the **[Access Token](https://docs.joinmastodon.org/client/authorized/#token)**
+**Use the Authorization Code to get the [Access Token](https://docs.joinmastodon.org/client/authorized/#token)**
 - Click the link above to get the needed curl command and place it into an API inspector tool (in Postman: use "Import" like in the previous section")
 - Replace **client_id**, **client_secret**, and *code* with your client_id, client_secret, and authorization_code
 - Execute the POST command using the API inspector tool and save off the results
@@ -76,5 +81,7 @@ The following steps are needed to successfully run the app:
 # Personal Note
 
 This README, and it's project, is a continual work in progress. Although there are good Swift Package Managers that can make some of these tasks much easier, I wanted to initially make sure I understand basic networking concepts and can read and understand API documentation. I also want to start Toot-ing as much as I Tweet.
+
+Update July 2023 - making this project Open Source so that others can contribute if they would like, as I unable to fully work this and provide due diligence to the project at this time.
 
 This Project is covered by the MIT License.
