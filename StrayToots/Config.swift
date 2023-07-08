@@ -50,7 +50,9 @@ extension String {
 
 
 
-// TOKEN ACCESS FUNCTIONS
+/// TOKEN ACCESS FUNCTIONS - GRAB TOKENS FROM PLIST FILE
+/// They essentially do the same few steps -> open the file as a URL, create a dictionary based off of URL, convert dictonary value into a string. The guard statement makes sure that all 3 have to occur or else function doesn't work
+
 // TODO: Make these functions more efficient, perhaps combining some of their aspects
 
 func getAccessToken() -> String {

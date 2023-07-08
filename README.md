@@ -37,9 +37,26 @@ Use the [Authorization GET Request](https://docs.joinmastodon.org/client/authori
 - copy/paste this string into your browser
 - it will bring you to your instance login page. Log into your account
 - will ask you to grant access based upon the request made
-- copy the authorization code and store it somewhere safe
+- copy the **authorization code** and store it somewhere safe
 
-Congrats! You finished the API setup! Now time to get back to Xcode.
+Use the Authorization Code to get the **[Access Token](https://docs.joinmastodon.org/client/authorized/#token)**
+- Click the link above to get the needed curl command and place it into an API inspector tool (in Postman: use "Import" like in the previous section")
+- Replace **client_id**, **client_secret**, and *code* with your client_id, client_secret, and authorization_code
+- Execute the POST command using the API inspector tool and save off the results
+- The results include your **Access Token**
+
+### Test your Authorization Token
+Test your token before jumping into Xcode - it can save a lot of time.
+
+- Copy/paste the below curl command into your API inspector tool
+> curl \
+    -H 'Authorization: Bearer our_access_token_here' \
+    https://mastodon.example/api/v1/accounts/verify_credentials
+- replace "mastodon.example" with your mastodon instance
+- replace "our_access_token_here" with your access token within the header section of the API tool used. (Note - make sure there is a space between "Bearer" and your access token)
+- You should see your credentials show up
+
+
 
 ### Running the Project
 The above steps provide a method to getting an access code. Please also refer to the [Mastodon API](https://docs.joinmastodon.org/api/ "Mastodon API") documentation if more information is needed. 
@@ -54,6 +71,13 @@ The following steps are needed to successfully run the app:
     4. Compile and Run "Stray Toots" for the companion iPhone app
     5. Compile and Run "Stray Toots Watch App" for the Watch App (which will have the Toots)
 
+## TroubleShooting
+
+If toots are not being seen, one quick way to troubleshoot is to attempt to view the request in your API inspector tool of choice.
+- Copy/paste this URL but replace "mastodon.example" with your instance: https://iosdev.space/api/v1/timelines/home?limit=10
+- In your API inspector tool, go to headings and add a field called "Authorization" with the key being your authorization access code (same thing placed into tokens plist file)
+
+This should help leave some bread crumbs into your issue.
 
 
 # Personal Note

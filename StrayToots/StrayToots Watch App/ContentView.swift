@@ -40,7 +40,7 @@ struct RefreshView: View {
     var body: some View {
         Button("🐘 REFRESH") {
             MastodonAPI.fetchTimelineData()
-            print("debug count: \(MastodonAPI.toots.count)")
+            print("debug: toots count: \(MastodonAPI.toots.count)")
         }
     }
 }
