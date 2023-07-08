@@ -71,13 +71,6 @@ The following steps are needed to successfully run the app:
     4. Compile and Run "Stray Toots" for the companion iPhone app
     5. Compile and Run "Stray Toots Watch App" for the Watch App (which will have the Toots)
 
-## TroubleShooting
-
-If toots are not being seen, one quick way to troubleshoot is to attempt to view the request in your API inspector tool of choice.
-- Copy/paste this URL but replace "mastodon.example" with your instance: https://iosdev.space/api/v1/timelines/home?limit=10
-- In your API inspector tool, go to headings and add a field called "Authorization" with the key being your authorization access code (same thing placed into tokens plist file)
-
-This should help leave some bread crumbs into your issue.
 
 
 # Personal Note

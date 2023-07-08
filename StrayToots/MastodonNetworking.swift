@@ -22,6 +22,8 @@ class MastodonNetworking: ObservableObject {
     
     @Published var toots = [Toot]() // toots will be held here
     
+    var mastodonInstance: String = "mastodon.example"
+    
     init() {
         print("init") // debug
     }
@@ -32,7 +34,7 @@ class MastodonNetworking: ObservableObject {
         let token = getAccessToken()
         
         // verify URL exists, else return
-        guard let url = URL(string: "https://iosdev.space/api/v1/timelines/home?limit=10") else { return }
+        guard let url = URL(string: "https://\(mastodonInstance)/api/v1/timelines/home?limit=10") else { return }
         // crete URL request
         var request = URLRequest(url: url, timeoutInterval: Double.infinity)
         
