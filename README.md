@@ -87,4 +87,4 @@ This README, and it's project, is a continual work in progress. Although there a
 Update July 2023 - making this project Open Source in case others would like to learn from it or develop it into something else, as I don't have the personal bandwidth to properly support it for a while. 
 
     
-** This Project is covered by the MIT License. **
+**This Project is covered by the MIT License.**
