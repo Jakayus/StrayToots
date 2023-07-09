@@ -74,9 +74,10 @@ The following steps are needed to successfully run the app:
 
 1. Clone, Fork, or Download the project for personal use
 2. Create a copy of the "TokensExample.plist" file and rename it to "Tokens.plist" (spelling is important so that you don't accidentally commit your token to the repo)
-3. Copy/Paste your personal Access Token to the file
-4. Compile and Run "Stray Toots" for the companion iPhone app
-5. Compile and Run "Stray Toots Watch App" for the Watch App (which will have the Toots)
+3. Copy/Paste your personal Access Token to the "Tokens.plist" file
+4. Navigate to the "MastodonNetworking.swift" file and replace "Mastodon.example" with your instance in the mastodon instance variable
+5. Compile and Run "Stray Toots" for the companion iPhone app
+6. Compile and Run "Stray Toots Watch App" for the Watch App (which will have the Toots)
 
 
 
