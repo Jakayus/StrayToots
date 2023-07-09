@@ -37,7 +37,7 @@ I personally used [Postman](https://www.postman.com "Postman.com") for getting t
 - Save off the contents somewhere for future use. Most important will be the **client_id** and the **client_secret**
 
 
-**Use the [Authorization GET Request](https://docs.joinmastodon.org/client/authorized/#login) within a web browser using the Client information provided earlier**
+**Use the [Authorization GET Request](https://docs.joinmastodon.org/client/authorized/#login) to get the Authorizaton Code**
 - Click the link above and copy/paste the https command somewhere you can edit it
 - replace "mastodon.exmaple" with your mastodon instance and "CLIENT_ID" with your client id
 - remove the line endings so that the command is one long string
