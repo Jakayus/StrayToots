@@ -12,7 +12,7 @@ iPhone app:
 - Log into an instance using iPhone companion app
 
 Watch App:
-- View user's home timeline
+- View user's timelines on instance
 - "Favourite" a Toot
 - "Boost" a Toot
 - "Bookmark" a Toot
@@ -72,18 +72,19 @@ The project currently uses a plist file that is used to place the access token n
 
 The following steps are needed to successfully run the app:
 
-    1. Clone, Fork, or Download the project for personal use
-    2. Create a copy of the "TokensExample.plist" file and rename it to "Tokens.plist" (spelling is important so that you don't accidentally commit your token to the repo)
-    3. Copy/Paste your personal Access Token to the file
-    4. Compile and Run "Stray Toots" for the companion iPhone app
-    5. Compile and Run "Stray Toots Watch App" for the Watch App (which will have the Toots)
+1. Clone, Fork, or Download the project for personal use
+2. Create a copy of the "TokensExample.plist" file and rename it to "Tokens.plist" (spelling is important so that you don't accidentally commit your token to the repo)
+3. Copy/Paste your personal Access Token to the file
+4. Compile and Run "Stray Toots" for the companion iPhone app
+5. Compile and Run "Stray Toots Watch App" for the Watch App (which will have the Toots)
 
 
 
 # Personal Note
 
-This README, and it's project, is a continual work in progress. Although there are good Swift Package Managers that can make some of these tasks much easier, I wanted to initially make sure I understand basic networking concepts and can read and understand API documentation. I also want to start Toot-ing as much as I Tweet.
+This README, and it's project, is a continual work in progress. Although there are good Swift Package Managers that can make some of these tasks much easier, I wanted to initially make sure I understand some basic networking concepts and can read and understand API documentation. I also want to start Toot-ing as much as I Tweet.
 
-Update July 2023 - making this project Open Source so that others can contribute if they would like, as I unable to fully work this and provide due diligence to the project at this time.
+Update July 2023 - making this project Open Source in case others would like to learn from it or develop it into something else, as I don't have the personal bandwidth to properly support it for a while. 
 
-This Project is covered by the MIT License.
+    
+** This Project is covered by the MIT License. **
