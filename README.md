@@ -2,14 +2,14 @@
 
 This Project creates a Mastodon Client for the Apple Watch that allows for simple Toot activities ("Favourite", "Boost", "Bookmark".) 
 
-The Watch and iPhone Apps must both be downloaded for Toots to be seen. Simple Toot interaction occurs on the Watch App. while settings and signing in happens on the companion iPhone app. 
+Simple Toot interaction occurs on the Watch App, while settings and signing in happens on the companion iPhone app. 
 
-**(Please note that the objectives are desired, and not yet implemented).**
+**(Please note that the objectives have not been implemented yet.).**
 
 ## App objectives:
 
 iPhone app:
-- Log into an instance using iPhone companion app
+- Log into an instance
 
 Watch App:
 - View user's timelines on instance
